@@ -1,0 +1,12 @@
+vowels = set('ayuioezh')
+word = input("Введите слово для подсчета гласных букв")
+'''
+  Объединение
+  Разность
+  Пересечение
+'''
+
+
+print(vowels.union(sorted(set(word)))) 
+print(vowels.difference(sorted(set(word))))
+print(vowels.intersection(sorted(set(word))))
