@@ -2,7 +2,9 @@ vowels = ['a', 'e', 'i', 'o', 'u']
 word = input("Provide a word to search for vowels: ")
 
 found = {}
-
+'''
+    setdeafult - если ключа нет, то инициализурем его еденицей, иначе инкрементируем значение 
+'''
 for letter in word:
     if letter in vowels:
         found.setdefault(letter, 0)
