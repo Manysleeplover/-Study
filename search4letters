@@ -1,0 +1,16 @@
+def search4vowels(phrase: str) -> set:
+    """ Выводит гласные, найдённые в слове """
+    vowels = set('aeiou')
+    found = vowels.intersection(set(phrase))
+    for vowel in found:
+        print(vowel)
+    return found
+
+
+def search4letters(phrase:str, letters:str) -> set:
+    ''' Возвращает множество из letters, найденных в указаной фразе  '''
+    return set(letters).intersection(set(phrase))
+
+
+print(search4vowels('harekiru'))
+print(search4lettersharekirumalafya', 'adsgaggt'))
