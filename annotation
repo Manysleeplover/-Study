@@ -1,0 +1,10 @@
+''' (:str) и (-> set) - строки аннотации, тип аргументов и тип возврата соответственно '''
+def search4vowels(word:str) -> set:
+    ''' Выводит гласные, найдённые в слове '''
+    vowels = set('aeiou')
+    found = vowels.intersection(set(word))
+    for vowel in found:
+        print(vowel)
+    return found
+
+print(search4vowels('harekiru'))
