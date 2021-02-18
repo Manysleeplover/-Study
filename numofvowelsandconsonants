@@ -1,0 +1,34 @@
+def search4lettersInLine(string: str, letters: str) -> int:
+    count = 0
+    for i in range(len(string)):
+        for j in range(len(letters)):
+            if string[i] == letters[j]:
+                count += 1
+    return count
+
+
+vowels = 'ауоыэяюёие'
+consonants = 'бвгджзйклмнпрстфхцчшщ'
+
+numberOfLines = int(input("Сколько будет строк?"))
+poem = []
+for i in range(numberOfLines):
+    poem.append(input())
+
+
+numberOfConsonants = 0
+numberOfVowels = 0
+
+#Поиск глассных в каждой строке
+for i in range(numberOfLines):
+    numberOfVowels += search4lettersInLine(poem[i], vowels)
+    print("В " + str(i+1) + " строке " + str(search4lettersInLine(poem[i], vowels)) + " глассных \n")
+
+#Поиск согласных в каждой строке
+for i in range(numberOfLines):
+    numberOfConsonants += search4lettersInLine(poem[i], consonants)
+    print("В " + str(i+1) + " строке " + str(search4lettersInLine(poem[i], consonants)) + " согласных \n")
+
+
+print("Количество гласных в стихотворении" + str(numberOfVowels) + '\n')
+print("Количество гласных в стихотворении" + str(numberOfConsonants) + '\n')
